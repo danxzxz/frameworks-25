@@ -1,0 +1,19 @@
+
+.container {
+    display: flex;
+}
+
+#containerForm {
+    width: 30%; /* ou qualquer valor proporcional */
+    padding: 10px;
+    box-sizing: border-box;
+}
+#containerCod{
+    width: 70%; /* ou qualquer valor proporcional */
+    padding: 10px;
+    box-sizing: border-box;
+}
+#btGerarCod{
+    height: 50px;
+
+}
