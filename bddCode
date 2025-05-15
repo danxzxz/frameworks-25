@@ -1,0 +1,16 @@
+CREATE DATABASE enderecos;
+USE enderecos;
+
+CREATE TABLE estado (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    sigla CHAR(2) NOT NULL
+);
+
+CREATE TABLE cidade (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    habitantes INT,
+    idestado INT,
+    FOREIGN KEY (idestado) REFERENCES estado(id)
+);
