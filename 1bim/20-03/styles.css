@@ -1,0 +1,42 @@
+:root {
+    --cor-fundo: #727D73;
+    --cor-botao: #727D73;
+    --cor-botao-hover: black;
+    --cor-card-background: #AAB99A;
+    --cor-card-border: black;
+}
+
+body {
+    background: var(--cor-fundo);
+    color: var(--cor-footer-text);
+}
+
+.card {
+    background: var(--cor-card-background);
+    border-color: var(--cor-card-border);
+}
+
+.btn-dark {
+    background: var(--cor-botao);
+    border: none;
+}
+
+
+.btn-dark:hover {
+    background: var(--cor-botao-hover);
+}
+
+.top-bar {
+background-color: var(--cor-card-background);
+color: rgb(0, 0, 0);
+text-align: center;
+padding: 10px 0;
+font-size: 45px;
+}
+
+.arq {
+    background-color: var(--cor-card-background);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 25px;
+    }
