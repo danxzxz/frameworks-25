@@ -1,5 +1,5 @@
 <?php
-require_once "conexao.php";
+include "conexao.php";
 
 class CriaClasses1 {
     private $tbBanco = "Tables_in_enderecos";
@@ -13,8 +13,16 @@ class CriaClasses1 {
         $sql = "SHOW TABLES";
         $query = $this->con->query($sql);
         $tabelas = $query->fetchAll(PDO::FETCH_OBJ);
-        var_dump($tabelas);
 
+        foreach ($tabelas as $tabela) {
+            $nomeTabela = ucfirst($tabela->{$this->tbBanco});
+            $conteudo = <<<EOT
+class {$nomeTabela} {
+}
+EOT;
+
+            echo "conteudo:<br><pre>$conteudo</pre><br><br>";
+        }
     }
 }
 

@@ -6,15 +6,18 @@ class Conexao {
     private $usuario = "root";
     private $senha = "bancodedados";
 
-    function conectar(){
-        try{
-            $con = new PDO(
-                "mysql:host=" . $this->server . ";dbname=" . $this->banco, $this->usuario, $this->senha 
+    function conectar() {
+        try {
+            $conn = new PDO(
+                "mysql:host=" . $this->server . ";dbname=" . $this->banco,
+                $this->usuario,
+                $this->senha
             );
-            return $con;
-        } catch (Exception $e)  {
-            echo "Erro ao conectar com o banco de dados: " . $e->getMessage();
+            return $conn;
+        } catch (Exception $e) {
+            echo "Erro ao conectar com o Banco de dados: " . $e->getMessage();
         }
     }
 }
-//(new Conexao())->conectar(); <-teste de conexao com o banco
+
+(new Conexao())->conectar();
